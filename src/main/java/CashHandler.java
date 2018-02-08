@@ -1,7 +1,4 @@
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class CashHandler {
 
@@ -23,34 +20,34 @@ public class CashHandler {
         return instance;
     }
 
-    public boolean acceptCash(ValidCash cash) {
+    public void acceptCash(ValidCash cash) {
         switch (cash) {
             case FIVE_PENCE:
                 System.out.println("5p");
                 customerCash = customerCash.add(new BigDecimal(0.05));
-                return true;
+                return;
             case TEN_PENCE:
                 System.out.println("10p");
                 customerCash = customerCash.add(new BigDecimal(0.10));
-                return true;
+                return;
             case TWENTY_PENCE:
                 System.out.println("20p");
                 customerCash = customerCash.add(new BigDecimal(0.20));
-                return true;
+                return;
             case FIFTY_PENCE:
                 System.out.println("50p");
                 customerCash = customerCash.add(new BigDecimal(0.50));
-                return true;
+                return;
             case ONE_POUND:
                 System.out.println("£1");
                 customerCash = customerCash.add(new BigDecimal(1.00));
-                return true;
+                return;
             case TWO_POUND:
                 System.out.println("£2");
                 customerCash = customerCash.add(new BigDecimal(2.00));
-                return true;
+                return;
             default:
-                return false;
+                return;
         }
 
     }
