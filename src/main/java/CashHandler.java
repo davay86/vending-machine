@@ -2,7 +2,6 @@ import java.math.BigDecimal;
 
 public class CashHandler {
 
-
     BigDecimal cashFloat;
     BigDecimal customerCash;
 
@@ -57,6 +56,7 @@ public class CashHandler {
         dispenseCash(customerCash);
         customerCash = new BigDecimal(0);
     }
+
     public void dispenseChange(BigDecimal usersExpenditure){
         BigDecimal change = customerCash.subtract(usersExpenditure);
         if(change.compareTo(BigDecimal.ZERO) > 0){
